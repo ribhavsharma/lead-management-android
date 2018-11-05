@@ -67,7 +67,7 @@ public class CallReceiver extends BroadcastReceiver {
                 notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         final NotificationCompat.Builder notification = new NotificationCompat.Builder(mContext)
-                .setSmallIcon(R.drawable.ic_call_black_24dp)
+                .setSmallIcon(R.drawable.ic_phone)
                 .setContentTitle("Call in Progress")
                 .setTicker("Lead Management")
                 .setContentIntent(contentIntent)
