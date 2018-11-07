@@ -8,15 +8,15 @@
     tools:context=".SplashActivity">
 
     <pl.droidsonroids.gif.GifTextView
-        android:layout_width="1500dp"
-        android:layout_height="758dp"
+        android:layout_width="1000dp"
+        android:layout_height="358dp"
         android:layout_alignParentBottom="true"
+
         android:background="@drawable/jbossanim"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteY="246dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -30,6 +30,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207"
+        app:layout_constraintVertical_bias="0.498"
         app:srcCompat="@drawable/ic_logo_launch" />
 </android.support.constraint.ConstraintLayout>

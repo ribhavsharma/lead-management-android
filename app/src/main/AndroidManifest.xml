@@ -25,11 +25,7 @@
         <activity
             android:name=".LaunchActivity"
             android:theme="@style/AppTheme.Launch">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".main.MainActivity"
@@ -60,7 +56,15 @@
             android:name=".main.contacts.importcontact.ImportContactActivity"
             android:parentActivityName=".main.MainActivity" />
         <activity android:name=".InfoSliderActivity" />
-        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppTheme.Launch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
