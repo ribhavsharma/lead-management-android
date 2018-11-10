@@ -24,7 +24,7 @@
         tools:replace="android:icon">
         <activity
             android:name=".LaunchActivity"
-            android:theme="@style/AppTheme.Launch">
+         >
 
         </activity>
         <activity
