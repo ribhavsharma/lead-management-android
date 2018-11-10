@@ -65,3 +65,6 @@ $ git push origin
 ## Help
 
 If you need any help anywhere in the process, you can always ask a question on our [Gitter Chat](https://gitter.im/jboss-outreach/gci).
+
+## Data Flow Diagram
+![leadmanagement](https://user-images.githubusercontent.com/35397939/48303927-22867800-e537-11e8-95eb-45f6d31d614f.png)
