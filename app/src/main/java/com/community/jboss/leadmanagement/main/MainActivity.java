@@ -180,6 +180,10 @@ public class MainActivity extends BaseActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+          if(mAuth.getCurrentUser() == null){
+            Toast.makeText(this, "Please sign in to perform this action!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
@@ -356,6 +360,10 @@ public class MainActivity extends BaseActivity
 
             header.findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             header.findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
+               Menu nav = navigationView.getMenu();
+            for (int i=0; i<5; i++){
+                nav.getItem(i).setEnabled(true);
+            }
         } else {
             Toast.makeText(getApplicationContext(), "Signed out", Toast.LENGTH_SHORT).show();
 
@@ -365,6 +373,10 @@ public class MainActivity extends BaseActivity
 
             header.findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             header.findViewById(R.id.sign_out_button).setVisibility(View.GONE);
+             Menu nav = navigationView.getMenu();
+            for (int i=0; i<5; i++){
+                nav.getItem(i).setEnabled(false);
+            }
         }
     }
 
@@ -382,7 +394,12 @@ public class MainActivity extends BaseActivity
     public void initFab() {
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content_frame);
         if (fragment instanceof ContactsFragment) {
-            fab.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), EditContactActivity.class)));
+            fab.setOnClickListener(view -> 
+            	startActivity(new Intent(getApplicationContext(), EditContactActivity.class));
+                }else {
+                    Toast.makeText(this, "Please sign in to perform this action!", Toast.LENGTH_SHORT).show();
+                }
+            });
             fab.setImageResource(R.drawable.ic_add_white_24dp);
         }
     }
